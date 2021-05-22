@@ -16,6 +16,12 @@ body::before {
   border-bottom-left-radius: 70px;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-size: 18px;
   font-family: "Barlow Condensed", sans-serif;
@@ -35,6 +41,10 @@ body {
   float: left;
 }
 
+.unlist {
+  display: none;
+}
+
 .hamber {
   height: 20px;
   margin-right: 70px;
@@ -42,9 +52,10 @@ body {
 }
 
 .section1 .devices {
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 100%;
-  height: auto;
-  margin: 15px;
+  transform: scale(1.3) translateX(15%);
 }
 
 .section2 {
@@ -114,4 +125,85 @@ body {
   color: hsl(231, 7%, 65%);
   letter-spacing: 1.7px;
   font-size: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .hamber {
+    display: none;
+  }
+
+  .unlist {
+    display: block;
+    float: right;
+    margin-right: 150px;
+    list-style-type: none;
+  }
+
+  ul li {
+    display: inline;
+    padding-left: 50px;
+  }
+
+  ul li a {
+    font-family: "Barlow Condensed", sans-serif;
+    color: hsl(230, 29%, 20%);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  ul li.login a {
+    color: hsl(231, 7%, 65%);
+  }
+
+  ul.unlist #dot #dot1 {
+    margin-top: 0px;
+    background-color: hsl(231, 7%, 65%);
+    height: 6px;
+    width: 6px;
+    border: none;
+    border-radius: 5px;
+    list-style-position: center;
+  }
+
+  .header {
+    width: 100%;
+    height: 20vh;
+    margin: 30px;
+  }
+
+  .logo {
+    height: 30px;
+    padding-left: 115px;
+  }
+
+  .section2 {
+    width: 40%;
+    display: inline;
+    margin-left: 80px;
+    margin-top: -30px;
+    margin-bottom: -30px;
+    padding-left: 65px;
+    float: left;
+  }
+
+  .section1 .devices {
+    width: 50%;
+    display: inline;
+    float: right;
+    transform: scale(1.2) translateX(15%);
+  }
+
+  .power {
+    font-size: 3.5rem;
+  }
+
+  .project {
+    margin-top: 25px;
+    padding-right: 100px;
+  }
+
+  .schedule {
+    margin-top: 60px;
+  }
 }
